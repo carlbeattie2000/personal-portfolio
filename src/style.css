@@ -1,0 +1,361 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.layout {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.personal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: 2rem;
+  font-family: monospace;
+}
+
+.profile-img > img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e5e5;
+  object-fit: cover;
+  object-position: center;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.role, .location {
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.hire-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-family: monospace;
+  color: #111;
+  border: 1px solid #111;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.hire-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+.github-link {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-family: monospace;
+  color: #888;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  color: #111;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 0.25rem;
+}
+
+.text-section-header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.text-section {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.text-section em {
+  color: #111;
+  font-style: normal;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #888;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.project-tag {
+  font-size: 0.75rem;
+  color: #888;
+  font-family: monospace;
+}
+
+.project-desc {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.project-link {
+  font-size: 0.875rem;
+  font-family: monospace;
+  color: #111;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  padding: 2rem 0 1rem;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.hire-btn-large {
+  display: inline-block;
+  padding: 0.75rem 2.5rem;
+  font-size: 1rem;
+  font-family: monospace;
+  color: #111;
+  border: 1px solid #111;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.hire-btn-large:hover {
+  background: #111;
+  color: #fff;
+}
+
+.github-link-large {
+  display: inline-block;
+  font-size: 1rem;
+  font-family: monospace;
+  color: #888;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.github-link-large:hover {
+  color: #111;
+}
+
+@media (max-width: 600px) {
+  .layout {
+    padding: 2rem 1.25rem;
+    gap: 3rem;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .personal-details {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .profile-img > img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .personal-details .name,
+  .personal-details .role,
+  .personal-details .location {
+    width: 100%;
+  }
+
+  .hire-btn {
+    margin-top: 0;
+  }
+
+  .text-section-header {
+    font-size: 1.25rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #e5e5e5;
+  }
+
+  .role, .location {
+    color: #666;
+  }
+
+  .hire-btn {
+    color: #e5e5e5;
+    border-color: #e5e5e5;
+  }
+
+  .hire-btn:hover {
+    background: #e5e5e5;
+    color: #111;
+  }
+
+  .github-link {
+    color: #666;
+  }
+
+  .github-link:hover {
+    color: #e5e5e5;
+  }
+
+  .text-section {
+    color: #999;
+  }
+
+  .text-section em {
+    color: #e5e5e5;
+  }
+
+  .section-label {
+    color: #666;
+  }
+
+  .project-card {
+    border-color: #222;
+  }
+
+  .project-tag {
+    color: #666;
+  }
+
+  .project-desc {
+    color: #999;
+  }
+
+  .project-link {
+    color: #e5e5e5;
+  }
+
+  .profile-img > img {
+    border-color: #222;
+  }
+
+  .footer {
+    border-top-color: #222;
+  }
+
+  .hire-btn-large {
+    color: #e5e5e5;
+    border-color: #e5e5e5;
+  }
+
+  .hire-btn-large:hover {
+    background: #e5e5e5;
+    color: #111;
+  }
+
+  .github-link-large {
+    color: #666;
+  }
+
+  .github-link-large:hover {
+    color: #e5e5e5;
+  }
+}
